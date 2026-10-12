@@ -1,0 +1,11 @@
+name: Digest Test Action
+description: Simple composite action for testing Renovate digest updates
+inputs:
+  message:
+    description: Message to print
+    default: hello
+runs:
+  using: composite
+  steps:
+    - run: echo "${{ inputs.message }}"
+      shell: bash
