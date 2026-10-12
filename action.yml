@@ -7,5 +7,7 @@ inputs:
 runs:
   using: composite
   steps:
-    - run: echo "${{ inputs.message }}"
+    - run: echo "$MESSAGE"
       shell: bash
+      env:
+        MESSAGE: ${{ inputs.message }}
