@@ -7,7 +7,9 @@ inputs:
 runs:
   using: composite
   steps:
-    - run: echo "$MESSAGE"
+    - run: |
+        echo "$MESSAGE"
+        echo "v1.0.0 (repointed)"
       shell: bash
       env:
         MESSAGE: ${{ inputs.message }}
